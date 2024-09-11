@@ -1,0 +1,435 @@
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px black solid;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+h1{
+    text-align: center;
+    color: rgb(168, 167, 167);
+    font-weight: 800;
+}
+#sc{
+    padding: 0;
+}
+header.nav .img{
+    justify-content: flex-start;
+}
+header .nav a img{
+    width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+header .nav{
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header .nav .navbar{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-right: auto;
+}
+header .nav .navbar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 6rem;
+    padding: 0;
+    margin: 0;
+}
+header .nav .navbar ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    transition: all 0.3s ease-in-out;
+}
+header .nav .navbar ul li:hover{
+    border-bottom: 5px solid black;
+    transition: 0.099s ease-out;
+    padding-top: 1px;
+}
+.dd{
+    display: flex;
+    justify-content: center;
+}
+.About{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+}
+.article img{
+    width: 170px;
+    border-radius: 10%;
+    box-shadow: 0 0 10px black;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100);
+    margin-left: 30px;
+}
+.article{
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    color: black;
+    padding: 30px;
+    font-weight: 400;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+}
+.article video{
+    width: 170px;
+    border-radius: 10%;
+    box-shadow: 0 0 10px black;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100);
+    margin-left: 30px;
+}
+.article p{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+}
+.popup{
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+    font-size: large;
+    padding: 20px;
+}
+.Social{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.login-container {
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    color: black;
+    padding: 30px;
+    font-weight: 400;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555555;
+    font-weight: bold;
+}
+.input-group input {
+    width: 99.5%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    font-size: 1rem;
+}
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    justify-content: center;
+}
+button:hover{
+    background-color: #317735;
+    transition: ease-in-out 0.2s;
+}
+.out{
+    background-color: #333333;
+    padding: 30px;
+    display: flex;
+    gap: 2rem;
+}
+.out .konzz{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.out .konzz ul{
+    list-style-type: none;
+    gap: 3rem;
+    flex-direction: row;
+    display: flex;
+    padding: 0;
+}
+.out .konzz ul a i:hover{
+    color: gold;
+    transition: ease-in-out 0.2s;
+}
+.out .konzz ul li a{
+    color: white;
+}
+.out .konzz ul li{
+    font-size: x-large;
+}
+.out .konzz h1{
+    color: white;
+    font-weight: 700;
+    line-height: 1.2rem;
+    font-size: x-large;
+    text-align: start;;
+}
+.out .konz{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.out .konz p{
+    color: white;
+    
+}
+/* Styling Accordion */
+.accordion {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+
+.accordion.active {
+    background-color: #555;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #333;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+.expertise-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.expertise-img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+.expertise-img:hover{
+    transform: scale(2);
+    transition: transform 0.3s ease-in-out;
+}
+.expertise-content {
+    max-width: 1200px;
+}
+.accordion {
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.accordion.active + .panel {
+    max-height: 200px; /* Atur sesuai dengan ukuran konten Anda */
+    transition: max-height 0.5s ease-out;
+}
+.panel {
+    font-size: 16px;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.expertise-img {
+    max-width: 100px; /* Ukuran maksimal gambar */
+    height: auto; /* Menjaga proporsi gambar */
+}
+.image-container {
+    display: flex;
+    gap: 10px; /* Jarak antar gambar */
+    justify-content: start; /* Menyusun gambar dari kiri */
+    align-items: center;
+    width: 500px;
+}
+.video-container {
+    display: flex;
+    gap: 10px;
+}
+
+.expertise-video {
+    width: 20%;
+    height: auto;
+}
+#progress-container {
+    margin: 20px 0;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.5s ease;
+}
+.container {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+/* CSS untuk layar lebih kecil dari 768px (ponsel) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .head .nav .navbar {
+        display: none;
+    }
+    .About .popup .article p{
+        display: flex;
+        font-size: medium;
+    }
+
+    .About .popup .article {
+        display: block;
+    }
+    
+    .About .popup .article img {
+        margin-left: 60px;
+    }
+    .expertise-content .accordion{
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 0px;
+    }
+
+    .out .konz{
+        display: none;
+    }
+
+    .expertise-content {
+        max-width: 100%;
+        padding: 0;
+    }
+    .expertise-section{
+        padding: 0;
+    }
+    #sc{
+        padding: 0;
+        margin: 0;
+    }
+    .About .popup{
+        display: flex;
+        width: 100%;
+    }
+    /* Main content images */
+    .image-container img {
+        width: 100%; /* Pastikan gambar menyesuaikan lebar layar */
+        margin: 10px 0; /* Ruang antar gambar */
+    }
+
+    /* Expertise section */
+    .expertise-section {
+        padding: 20px;
+    }
+
+    .expertise-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .expertise-img {
+        display: none; /* Kurangi ukuran gambar di ponsel */
+        margin: 10px auto;
+    }
+
+    /* Login form */
+    .login-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    /* Video container */
+    .video-container video {
+        width: 50%;
+        height: auto;
+    }
+
+    .video-container {
+        display: block;
+    }
+
+    /* Footer */
+    .out {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .out ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .out ul li {
+        margin: 0 10px;
+    }
+}
+
